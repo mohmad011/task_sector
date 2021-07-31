@@ -1,0 +1,22 @@
+{
+  "name": "page-transitions-js-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./*.html -d build",
+    "build": "parcel build ./*.html -d build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.35.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@dogstudio/highway": "^2.1.2",
+    "gsap": "^2.1.2"
+  }
+}
