@@ -5,15 +5,15 @@ import {Fade , Fade2 , Fade3} from './transitionD'
 const H = new Highway.Core({
 	transitions: {
 		home: Fade,
-		search:Fade2,
-		products: Fade3,
-		end:Fade2
+    end:Fade2,
+    products:Fade3,
+		search:Fade2
 	}
 })
 
 
-var slideIndex = 0;
-showSlides();
+let slideIndex = 0;
+showSlides()
 
 function showSlides() {
   var i;

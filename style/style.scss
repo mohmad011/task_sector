@@ -8,13 +8,10 @@
 	height: 100vh;
 	position: absolute;
 	width: 100%;
-	// background-color:#eee;
+ 	z-index: 10;
 
 	.home-content,.products-content,.search-content,.end-presentation{
 		height: 100%;
-		display: flex;
-		justify-content: space-evenly;
-		align-items:center;
 		img{
 			height: 100%;
 			max-width: 100%;
@@ -72,47 +69,44 @@
 }
 .content,.content-end,.content-home,.content-search,.content-products{
 	width: 40%;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	height: 100vh;
+}
+
+.content-search{
+	// width: 30%;
 }
 
 
 
-.content-end{
+.content-end,.content-home,.content-products,.content-search{
+    z-index: 3;
+    position: relative;
+	@media(min-width: 1440px){
+		&{
+			width: 30%;
+		}
+	}
+
 	@media(max-width: 767px){
 		&{
-			background: url(../images/man-on-the-mobile.svg) no-repeat center center;
-				-webkit-background-size:cover;
-			-moz-background-size:cover;
-			-o-background-size:cover;
-			background-size:cover;
-			height: 100vh;
 			width: 100%;
+			height: 100vh;
 		}
 	}
 }
 
-.content-home{
-	@media(max-width: 767px){
-		&{
-			background: url(../images/bulb.svg) no-repeat center center;
-				-webkit-background-size:cover;
-			-moz-background-size:cover;
-			-o-background-size:cover;
-			background-size:cover;
-			height: 100vh;
-			width: 100%;
-		}
-	}
+.bx-content-end{
+	min-height: 15rem;
 }
 
 .content-search{
 	@media(max-width: 767px){
 		&{
-			background: url(../images/paper.svg) no-repeat center center;
-				-webkit-background-size:cover;
-			-moz-background-size:cover;
-			-o-background-size:cover;
-			background-size:cover;
-			height: 100vh;
+			// background: url(../images/paper.svg) no-repeat center center;
 			width: 100%;
 		}
 	}
@@ -121,12 +115,7 @@
 .content-products{
 	@media(max-width: 767px){
 		&{
-			background: url(../images/woman-searching.svg) no-repeat center center;
-				-webkit-background-size:cover;
-			-moz-background-size:cover;
-			-o-background-size:cover;
-			background-size:cover;
-			height: 100vh;
+			// background: url(../images/woman-searching.svg) no-repeat center center;
 			width: 100%;
 		}
 	}
@@ -135,10 +124,9 @@
 .name-medea{
 	text-align: center;
 	border: 1px solid;
-	width: 30%;
+	width: 58%;
 	margin: 0 auto;
 	border-radius: 1rem;
-	background-color:#0000000a;
 	text-transform: uppercase;
 	font-weight: bold;
 	color:#009688;
@@ -150,35 +138,26 @@
 	background-color:#fff;
 }
 
-.name-medea:hover{
-	background-color:#0000003d;
-}
-
-.name-medea.prod:hover{
-	background-color:#ffffff3d;
-}
-
-.info-prod{
-	color: #fff;
-}
-
-.img-back{
-	width: 50%;
-	height: 100vh;
-	img{
-	    max-width: 100%;
-	    max-height: 100%;
+.bx-looking{
+    max-width: 45%;
+	@media(min-width: 2050px){
+		&{
+			max-width: 35%;
+		}
 	}
 }
 
-.about-content{
-	background: url(../images/man-on-the-mobile.svg) no-repeat center center fixed;
-
+h3{
+	font-size: 1rem;
+	font-weight: bold;
+	color: #000;
 }
 
-.search-content{
-	// background: url(../images/paper.svg) no-repeat center center fixed;
-
+.img-back{
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 /* Slideshow container */
