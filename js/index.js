@@ -15,6 +15,10 @@ new Splide( '.splide', {
   type    : 'loop',
   perPage : 3,
   autoplay: true,
+  speed:1000,
+  // rewind:true,
+  interval:2000,
+  lazyLoad: 'loaded',
 } ).mount();
 
 let koko = document.querySelector('.splide__slide')
