@@ -103,9 +103,17 @@ body{
 .content-end,.content-home,.content-products,.content-search{
     z-index: 4;
     position: relative;
+    
 	@media(min-width: 1440px){
 		&{
 			width: 30%;
+			padding-top: 5rem;
+		}
+	}
+
+	@media(min-width: 2000px){
+		&{
+			padding-top: 20rem;
 		}
 	}
 
@@ -245,6 +253,7 @@ h3{
 		.splide__track{
 			& >{
 				.splide__list{
+					margin: 0 auto !important;
 					& > {
 						.splide__slide{
 							max-width: 100px !important;
