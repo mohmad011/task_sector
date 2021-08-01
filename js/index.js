@@ -11,6 +11,18 @@ const H = new Highway.Core({
 	}
 })
 
+new Splide( '.splide', {
+  type    : 'loop',
+  perPage : 3,
+  autoplay: true,
+} ).mount();
+
+let koko = document.querySelector('.splide__slide')
+
+if (document.title == 'Products') {
+  koko.style.display = 'none'
+  setTimeout(koko.style.display = 'block' , 200)
+}
 
 let slideIndex = 0;
 showSlides()

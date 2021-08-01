@@ -63,6 +63,7 @@ export class Fade3 extends Highway.Transition{
 		.fromTo(to,0.5,{height:'2vh'} , {height:'100vh' , top:'0%' , onComplete: () => {
 			from.remove();
 			setTimeout(location.reload() , 200)
+			// location.reload()
 			done();
 		}})
 

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="./style/style.scss" />
     <title>Products</title>
   </head>
@@ -14,58 +15,68 @@
       <section data-router-view="products" class="products">
           <div class="products-presentation">
             <div class="position-relative d-flex justify-content-between">
+
+
               <div class="img-back d-md-block">
                 <img class="img-fluid d-xl-block d-none h-100" src="./images/woman-searching-page-4-desktop.png" alt="bulb.svg" />
                 <img class="img-fluid d-xl-none d-none d-md-block h-100" src="./images/woman-searching-page-4-tablet.png" alt="bulb.svg" />
                 <img class="img-fluid d-md-none h-100" src="./images/woman-searching-page-4-mobile.png" alt="bulb.svg" />
               </div>
-              <div class="container content-products  d-flex flex-column">
+
+              <div class="container content-products  d-flex flex-column justify-content-between">
                 <div class="w-100 text-center d-flex justify-content-center">
                   <div class="bx-looking rounded-lg py-3 mt-4">
                     <h3 class="lead mt-3 mb-3 info-prod">I am looking for your hardware</h3>
                   </div>
                 </div>
-                <!-- Slideshow container -->
-                <div class="slideshow-container">
-
-                  <!-- Full-width images with number and caption text -->
-                  <div class="mySlides fade">
-                    <img src="./images/photo-1.png" alt="" />
-                  </div>
-
-                  <div class="mySlides fade">
-                    <img src="./images/photo-2.png" alt="" />
-                  </div>
-
-                  <div class="mySlides fade">
-                    <img src="./images/photo-3.png" alt="" />
-                  </div>
-
-                  <div class="mySlides fade">
-                    <img src="./images/photo-4.png" alt="" />
-                  </div>
-
-                  <div class="mySlides fade">
-                    <img src="./images/photo-5.png" alt="" />
-                  </div>
-
-                  <div class="mySlides fade">
-                    <img src="./images/photo-6.png" alt="" />
-                  </div>
-
-                </div>
-                <!-- <a class="mt-4 btn btn-primary btn-lg btn-block" aria-current="page" href="/Search.html">Go to Search!</a> -->
               </div>
+
               <div class="mean-img-back">
                 <img class="img-fluid d-none d-md-inline-block h-100" src="./images/Asset1.png" alt="bulb.svg" />
                 <img class="img-fluid d-md-none h-100" src="./images/PHONE.png" alt="bulb.svg" />
               </div>
+
+              <div class="bx-splide">
+                <div class="splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+
+                      <!-- Full-width images with number and caption text -->
+                      <li class="splide__slide">
+                        <img src="./images/photo-1.png" alt="" />
+                      </li>
+
+                      <li class="splide__slide">
+                        <img src="./images/photo-2.png" alt="" />
+                      </li>
+
+                      <li class="splide__slide">
+                        <img src="./images/photo-3.png" alt="" />
+                      </li>
+
+                      <li class="splide__slide">
+                        <img src="./images/photo-4.png" alt="" />
+                      </li>
+
+                      <li class="splide__slide">
+                        <img src="./images/photo-5.png" alt="" />
+                      </li>
+
+                      <li class="splide__slide">
+                        <img src="./images/photo-6.png" alt="" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
       </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
