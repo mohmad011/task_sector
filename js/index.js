@@ -17,7 +17,7 @@ new Splide( '.splide', {
   autoplay: true,
   speed:2000,
   // rewind:true,
-  interval:2000,
+  interval:-100,
   lazyLoad: 'loaded',
 } ).mount();
 
