@@ -15,7 +15,7 @@ new Splide( '.splide', {
   type    : 'loop',
   perPage : 3,
   autoplay: true,
-  speed:1000,
+  speed:2000,
   // rewind:true,
   interval:2000,
   lazyLoad: 'loaded',
