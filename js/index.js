@@ -16,30 +16,6 @@ new Splide( '.splide', {
   perPage : 3,
   autoplay: true,
   speed:2000,
-  // direction:'rtl',
   interval:0,
   lazyLoad: 'loaded',
 } ).mount();
-
-let koko = document.querySelector('.splide__slide')
-
-if (document.title == 'Products') {
-  koko.style.display = 'none'
-  setTimeout(koko.style.display = 'block' , 200)
-}
-
-let slideIndex = 0;
-showSlides()
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
