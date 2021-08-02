@@ -4,25 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon Ico -->
     <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico"/>
+
+    <!-- Start Style files -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/splide-core.min.css">
+    <link rel="stylesheet" href="./style/splide-core.min.css" />
     <link rel="stylesheet" href="./style/style.scss" />
+    <!-- End Style files -->
+
     <title>Products</title>
   </head>
   <body>
+    <!-- Start Box Transition -->
     <main data-router-wrapper>
+
+      <!-- Start Name Box Transition -->
       <section data-router-view="products" class="products">
+
+          <!-- Start Products Presentation Content -->
           <div class="products-presentation">
+
+            <!-- Start Section Main Page -->
             <div class="position-relative d-flex justify-content-between">
 
-
+              <!-- Start Part Img -->
               <div class="img-back d-md-block">
                 <img class="img-fluid d-xl-block d-none h-100" src="./images/woman-searching-page-4-desktop.png" alt="bulb.svg" />
                 <img class="img-fluid d-xl-none d-none d-md-block h-100" src="./images/woman-searching-page-4-tablet.png" alt="bulb.svg" />
                 <img class="img-fluid d-md-none h-100" src="./images/woman-searching-page-4-mobile.png" alt="bulb.svg" />
               </div>
+              <!-- End Part Img -->
 
+              <!-- Start Main Content Section -->
               <div class="container content-products  d-flex flex-column justify-content-between">
                 <div class="w-100 text-center d-flex justify-content-center">
                   <div class="bx-looking rounded-lg py-3 mt-4">
@@ -30,12 +45,16 @@
                   </div>
                 </div>
               </div>
+              <!-- End Main Content Section -->
 
-              <div class="mean-img-back">
+              <!-- Start Main Back Img -->
+              <div class="main-img-back">
                 <img class="img-fluid d-none d-md-inline-block h-100" src="./images/Asset1.png" alt="bulb.svg" />
                 <img class="img-fluid d-md-none h-100" src="./images/PHONE.png" alt="bulb.svg" />
               </div>
+              <!-- End Main Back Img -->
 
+              <!-- Start Section Slider -->
               <div class="bx-splide">
                 <div class="splide">
                   <div class="splide__track">
@@ -69,14 +88,26 @@
                   </div>
                 </div>
               </div>
+              <!-- End Section Slider -->
+
             </div>
+            <!-- End Section Main Page -->
+
           </div>
+          <!-- End Home Presentation Content -->
 
       </section>
+      <!-- End Name Box Transition -->
+
     </main>
+    <!-- End Box Transition -->
+
+    <!-- Start JS Files -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="./js/index.js"></script>
+    <!-- End JS Files -->
+    
   </body>
 </html>

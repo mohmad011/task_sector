@@ -1,94 +1,75 @@
-/**
- * @file Highway default transition that handle DOM animations.
- * @author Anthony Du Pont <bulldog@dogstudio.co>
- */
 import Highway from '@dogstudio/highway'
 import {TimelineLite} from 'gsap'
 
-export default class Transition {
+export class Fade extends Highway.Transition{
+	in({from,to,done}){
 
-  /**
-   * @arg {object} wrap — [data-router-wrapper] node
-   * @arg {object} name — Transition name
-   * @constructor
-   */
-  constructor(wrap, name) {
-    // The [data-router-wrapper] is the only main information we need since the role of
-    // the transition is to show/hide the required DOM elements.
-    this.wrap = wrap;
+		const t1 = new TimelineLite();
+		t1.fromTo(to,0.5,{left:'-100%',top:'50%'},{left:'0%'})
+		.fromTo(to,0.5,{height:'2vh'} , {height:'100vh' , top:'0%' , onComplete: () => {
+			from.remove();
+			done();
+		}})
 
-    // Save transition name for later.
-    this.name = name;
-  }
+		.fromTo(to.children[0], 2, {display: 'none',opacity:0} , {display: 'block',opacity:1})
+	}
+	out({from,done}){
+		done();
+	}
+}
 
-  /**
-   * Add the view in DOM and play an `in` transition if one is defined.
-   *
-   * @return {object} Promise
-   * @param {object} datas - Set of datas
-   */
-  show({ trigger, contextual }) {
-    // Get View
-    const to = this.wrap.lastElementChild;
-    const from = this.wrap.firstElementChild;
+export class Fade2 extends Highway.Transition{
+	in({from,to,done}){
 
-    // Promise
-    return new Promise(resolve => {
-      // The `in` method in encapsulated in the `show` method make transition
-      // code easier to write. This way you don't have to define any Promise
-      // in your transition code and focus on the transition itself.
-      if (!contextual) {
-        // Change Attributes
-        to.setAttribute('data-transition-in', this.name);
-        to.removeAttribute('data-transition-out', this.name);
+		const t1 = new TimelineLite();
+		t1.fromTo(to,0.5,{top:'-100%'},{right:'0%',top:'0%'})
+		.fromTo(to,0.5,{height:'100vh',width:'1vw'} , {width:'100vw' , top:'0%' , onComplete: () => {
+			from.remove();
+			done();
+		}})
 
-        // Call transition attached to the view.
-        this.in && this.in({ to, from, trigger, done: resolve });
+		.fromTo(to.children[0], 2, {display: 'none',opacity:0} , {display: 'block',opacity:1})
+	}
+	out({from,done}){
+		done();
+	}
 
-      } else {
-        // Change Attributes
-        to.setAttribute('data-transition-in', contextual.name);
-        to.removeAttribute('data-transition-out', contextual.name);
+}
 
-        // Call the contextual transition.
-        contextual.in && contextual.in({ to, from, trigger, done: resolve });
 
-      }
-    });
-  }
+// export class Fade3 extends Highway.Transition{
+// 	in({from,to,done}){
 
-  /**
-   * Play an `out` transition if one is defined and remove the view from DOM.
-   *
-   * @return {object} Promise
-   * @param {object} datas - Set of datas
-   */
-  hide({ trigger, contextual }) {
-    // Get view
-    const from = this.wrap.firstElementChild;
+// 		const t1 = new TimelineLite();
+// 		t1.fromTo(to,0.5,{top:'-100%'},{left:'0%',bottom:'0%',top:'0%'})
+// 		.fromTo(to,0.5,{height:'100vh',width:'1vw'} , {width:'100vw' , top:'0%' , onComplete: () => {
+// 			from.remove();
+// 			done();
+// 		}})
 
-    // Promise
-    return new Promise(resolve => {
-      // The `out` method in encapsulated in the `hide` method make transition
-      // code easier to write. This way you don't have to define any Promise
-      // in your transition code and focus on the transition itself.
-      if (!contextual) {
-        // Change Attributes
-        from.setAttribute('data-transition-out', this.name);
-        from.removeAttribute('data-transition-in', this.name);
+// 		.fromTo(to.children[0], 2, {display: 'none',opacity:0} , {display: 'flex',opacity:1})
+// 	}
+// 	out({from,done}){
+// 		done();
+// 	}
+// }
 
-        // Call the transition attached to the view.
-        this.out && this.out({ from, trigger, done: resolve });
 
-      } else {
-        // Change Attributes
-        from.setAttribute('data-transition-out', contextual.name);
-        from.removeAttribute('data-transition-in', contextual.name);
+export class Fade3 extends Highway.Transition{
+	in({from,to,done}){
 
-        // Call the contextual transition.
-        contextual.out && contextual.out({ from, trigger, done: resolve });
+		const t1 = new TimelineLite();
+		t1.fromTo(to,0.5,{left:'-100%',bottom:'0%'},{left:'0%'})
+		.fromTo(to,0.5,{height:'2vh'} , {height:'100vh' , top:'0%' , onComplete: () => {
+			from.remove();
+			// setTimeout(location.reload() , 200)
+			location.reload()
+			done();
+		}})
 
-      }
-    });
-  }
+		.fromTo(to.children[0], 2, {display: 'none',opacity:0} , {display: 'block',opacity:1})
+	}
+	out({from,done}){
+		done();
+	}
 }

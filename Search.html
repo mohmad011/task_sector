@@ -4,60 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon Ico -->
     <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico"/>
+
+    <!-- Start Style files -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.scss" />
+    <!-- End Style files -->
+
     <title>Search</title>
   </head>
   <body>
+    <!-- Start Box Transition -->
     <main data-router-wrapper>
+
+      <!-- Start Name Box Transition -->
       <section data-router-view="search" class="search">
+
+          <!-- Start Search Presentation Content -->
           <div class="search-presentation">
+
+            <!-- Start Section Main Page -->
             <div class="position-relative d-flex justify-content-between">
+
+              <!-- Start Part Img -->
               <div class="img-back d-md-block">
                 <img class="img-fluid d-xl-block d-none h-100" src="./images/paper-background-page-3-desktop.png" alt="bulb.svg" />
                 <img class="img-fluid d-none d-xl-none d-md-block h-100" src="./images/paper-background-page-3-tablet.png" alt="bulb.svg" />
                 <img class="img-fluid d-md-none h-100" src="./images/paper-background-page-3-mobile.png" alt="bulb.svg" />
               </div>
+              <!-- End Part Img -->
+
+              <!-- Start Main Content Section -->
               <div class="container content-search">
-                <div>
-                  <div class="bx-name-medea mb-1 mt-1">
-                    <p class="name-medea pt-4 pb-4">
-                        <img src="./images/logo.png" alt="" />
-                    </p>
-                  </div>
-                  <div class="bx-content pt-3 mt-2 pb-3 rounded-lg">
-                    <div class="container">
-                      <h3 class="mt-2 mb-3 text-secondary">List of your sectors</h3>
-                      <div class="bx-list-sector greenlight p-2 rounded-lg ">
-                        <ul class="container list-group list-unstyled">
-                          <li>Ground floor</li>
-                          <li>First floor</li>
-                          <li>second floor</li>
-                          <li class="pb-3">Garden</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="bx-content mb-4 mt-4 pb-3 rounded-lg">
-                    <div class="container">
-                       <h3 class="lead pt-3 text-secondary">Now the sector have been created, now add the hardware to your intrusion system</h3>
+
+                <!-- Start Box Logo -->
+                <div class="mt-4">
+                  <p class="text-center pt-4 pb-4">
+                      <img src="./images/logo.png" alt="" />
+                  </p>
+                </div>
+                <!-- End Box Logo -->
+
+                <!-- Start Content Section -->
+                <div class="bx-content pt-3 mt-2 pb-3 rounded-lg">
+                  <div class="container">
+                    <h3 class="mt-2 mb-3 text-secondary">List of your sectors</h3>
+                    <div class="bx-list-sector greenlight p-2 rounded-lg ">
+                      <ul class="container list-group list-unstyled">
+                        <li>Ground floor</li>
+                        <li>First floor</li>
+                        <li>second floor</li>
+                        <li class="pb-3">Garden</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+                <!-- End Content Section -->
+
+                <!-- Start Another Content Section -->
+                <div class="bx-content mb-4 mt-4 pb-3 rounded-lg">
+                  <div class="container">
+                     <h3 class="lead pt-3 text-secondary">Now the sector have been created, now add the hardware to your intrusion system</h3>
+                  </div>
+                </div>
+                 <!-- End Another Content Section -->
+
+                 <!-- Start Button Search -->
                 <a class="mt-4 btn btn-primary btn-lg btn-block" aria-current="page" href="/Products.html">Search</a>
+                <!-- End Button Search -->
+
               </div>
-              <div class="mean-img-back">
+              <!-- End Main Content Section -->
+
+              <!-- Start Main Back Img -->
+              <div class="main-img-back">
                 <img class="img-fluid d-none d-md-inline-block h-100" src="./images/Asset1.png" alt="bulb.svg" />
                 <img class="img-fluid d-md-none h-100" src="./images/PHONE.png" alt="bulb.svg" />
               </div>
-            </div>
-          </div>
-      </section>
-    </main>
+              <!-- End Main Back Img -->
 
+            </div>
+            <!-- End Section Main Page -->
+
+          </div>
+          <!-- End Home Presentation Content -->
+
+      </section>
+      <!-- End Name Box Transition -->
+
+    </main>
+    <!-- End Box Transition -->
+
+    <!-- Start JS Files -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
+    <!-- End JS Files -->
+    
   </body>
 </html>

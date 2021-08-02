@@ -1,0 +1,36 @@
+// Use Mixins File
+@use "Mixins";
+
+// Start Section End
+.end{
+	@include Mixins.mainStyleParent;
+	background-color:#ddd;
+
+	// Start Content Of End
+	.content-end{
+		@include Mixins.mainContent;
+		
+		// Start Section Of Content in End
+		.bx-content-end{
+			background-color:#f8f9fab0;
+			border-radius:.4rem;
+		}
+		// End Section Of Content in End
+	}
+	// End Content Of End
+
+	// Start Img
+	.img-back{
+	    @include Mixins.pageBackImg;
+	}
+	// End Img
+
+	// Start Main Img Back
+	.main-img-back{
+	    @include Mixins.mainBackImg;
+	}
+	// End Main Img Back
+
+	
+}
+// End Section End

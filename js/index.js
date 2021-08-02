@@ -1,5 +1,5 @@
 import Highway from '@dogstudio/highway'
-import {Fade , Fade2 , Fade3} from './transitionD'
+import {Fade , Fade2 , Fade3} from './transition'
 
 
 const H = new Highway.Core({
@@ -17,7 +17,7 @@ new Splide( '.splide', {
   autoplay: true,
   speed:2000,
   // direction:'rtl',
-  interval:-100,
+  interval:0,
   lazyLoad: 'loaded',
 } ).mount();
 
