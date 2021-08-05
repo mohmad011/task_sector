@@ -1,9 +1,12 @@
 {
+  "homepage": "http://Mohmad012.github.io/NEW_Portfolio",
   "name": "page-transitions-js-master",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "parcel ./*.html -d build",
     "build": "parcel build ./*.html -d build"
   },
@@ -12,6 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
+    "gh-pages": "^3.2.3",
     "sass": "^1.35.2"
   },
   "dependencies": {
